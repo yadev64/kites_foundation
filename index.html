@@ -151,7 +151,7 @@ body.fp-add-view [data-block-type]:after {
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/froala-editor/css/froala_editor.pkgd.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/froala-editor/css/froala_style.min.css">
 </head>
-<body>
+<body style="background-color: rgb(0,0,0);">
 
 
     <header data-block-type="headers" data-id="1" style="background-color: rgba(0,0,0,1.0)">
@@ -171,7 +171,7 @@ body.fp-add-view [data-block-type]:after {
                 <a class="nav-link" href="#" contenteditable="false">Home <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="Aayush.html" contenteditable="false">Aayush</a>
+                <a class="nav-link" href="Ayush.html" contenteditable="false">Ayush</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="Bhumi.html" contenteditable="false">Bhumi</a>
@@ -199,32 +199,34 @@ body.fp-add-view [data-block-type]:after {
         </nav>
       </div>
     </header>
-<div class="w3-content w3-section" style="max-width:1500px">
-                    <img class="mySlides" src="img/Home/c1.jpg" style="width:100%; max-height: 600px; overflow: hidden;">
-                    <img class="mySlides" src="img/Home/c2.jpg" style="width:100%; max-height: 600px; overflow: hidden;">
-                    <img class="mySlides" src="img/Home/c3.png" style="width:100%; max-height: 600px; overflow: hidden;">
-                    <img class="mySlides" src="img/Home/c4.png" style="width:100%; max-height: 600px; overflow: hidden;">
-                    <img class="mySlides" src="img/Home/c5.jpg" style="width:100%; max-height: 600px; overflow: hidden;">            
-                    
-  </div>
-                  
-                  <script>
-                  var myIndex = 0;
-                  carousel();
-                  
-                  function carousel() {
-                    var i;
-                    var x = document.getElementsByClassName("mySlides");
-                    for (i = 0; i < x.length; i++) {
-                      x[i].style.display = "none";  
-                    }
-                    myIndex++;
-                    if (myIndex > x.length) {myIndex = 1}    
-                    x[myIndex-1].style.display = "block";  
-                    setTimeout(carousel, 3000); // Change image every 3 seconds
-                  }
-                  </script>
 
+    <div class="w3-content w3-section" style="max-width:1500px">
+
+    
+
+      <img class="mySlides" src="img/Home/c1.jpg" style="width:100% ">
+      <img class="mySlides" src="img/Home/c2.jpg" style="width:100% ">
+      <img class="mySlides" src="img/Home/c3.jpg" style="width:100% ">
+      <img class="mySlides" src="img/Home/c4.jpg" style="width:100% ">
+      <img class="mySlides" src="img/Home/c5.jpg" style="width:100% ">
+    </div>
+    
+    <script>
+    var myIndex = 0;
+    carousel();
+    
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      myIndex++;
+      if (myIndex > x.length) {myIndex = 1}    
+      x[myIndex-1].style.display = "block";  
+      setTimeout(carousel, 2000); // Change image every 2 seconds
+    }
+    </script>
 
 
 <section class="fdb-block" data-block-type="contents" data-id="16" draggable="true" style="background-color: black;">
@@ -240,19 +242,17 @@ body.fp-add-view [data-block-type]:after {
   </div>
 </section>
 
-<section class="fdb-block fp-active" data-block-type="contents" data-id="1" style="background-color: rgb(0,0,0);">
-  <div class="col-fill-right" style="background-image: url(img/Home/kalam.jpg);">
-  </div>
-  <div class="container py-5">
-    <div class="row">
-      <div class="col-12 col-md-5 text-center">
-        <h1 style="color: blue;">our INSPIRATION</h1>
-        <p class="lead">" You have to <span style="color: yellow;">DREAM</span></br>before your dreams </br>can come <span style="color: yellow;">TRUE</span> "</br></br>     - APJ ABDUL KALAM</p>
+<section class="fdb-block" data-block-type="contents" data-id="2" style="background-color: black;">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-12 col-md-6 col-lg-5">
+        <h1 style="color: blue;">OUR INSPIRATION</h1>
+        <p class="lead"></br>" You have to <span style="color: yellow;">DREAM</span></br>before your dreams </br>can come <span style="color: yellow;">TRUE</span> "</br></br>     - APJ ABDUL KALAM</p>
       </div>
+      <div class="col-12 col-md-6 ml-md-auto mt-4 mt-md-0"><p><img alt="image" class="img-fluid" src="img/Home/kalam.jpg"></p></div>
     </div>
   </div>
 </section>
-
 
 <section id="HWR" class="fdb-block team-1 fp-active" data-block-type="teams" data-id="1" draggable="true" style="background-color: rgb(0,0,0);">
   <div class="container ">
