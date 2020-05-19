@@ -1,292 +1,205 @@
-<!-- Begin Mailchimp Signup Form -->
+
 <!DOCTYPE html>
+
 <html>
-    <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/froala/design-blocks@master/dist/css/froala_blocks.min.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/froala-editor/css/froala_editor.pkgd.min.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/froala-editor/css/froala_style.min.css">
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-        <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
 
-<style type="text/css">
-	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+<head>
+    <title>Registration</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/froala/design-blocks@master/dist/css/froala_blocks.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/froala-editor/css/froala_editor.pkgd.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/froala-editor/css/froala_style.min.css">
 
-  body, html {
-  margin: 0;
-  height: 100%;
-  padding: 0;
-  background: url(img/reg.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-color: black;
-}
+    <style>
+        body{
+            background: url('img/Home/reg.jpg');
+            background-size: cover;
+            font-family: Arial, Helvetica, sans-serif;  
+        }
+        .wrap{
+            max-width: 480px;
+            border-radius: 20px;
+            margin: auto;
+            background: rgba(0,0,0,0.8);
+            box-sizing: border-box;
+            padding: 40px;
+            color: #fff;
+            margin-top: 70px;
+        }
+        .dpdwn{
+            max-width: 480px;
+            border-radius: 20px;
+            margin: auto;
+            background: rgba(0,0,0,0.8);
+            box-sizing: border-box;
+            padding: 40px;
+            color: #fff;
+            margin-top: 100px;
+            width:100%;
+            box-sizing: border-box;
+            padding: 12px 5px;
+            background: rgba(0,0,0,0.10);
+            outline: none;
+            border: none;
+            border-bottom: 1px dotted #fff;
+            color: #fff;
+            border-radius: 5px;
+            margin: 5px;
+            font-weight: bold;
+        }
+        option{
+            background: black;
+            color: #fff;
+        }
+        h2{
+            text-align: center;
+            color: skyblue;
+        }
+        input[type=text],input[type=tel]
+        {
+            width:100%;
+            box-sizing: border-box;
+            padding: 12px 5px;
+            background: rgba(0,0,0,0.10);
+            outline: none;
+            border: none;
+            border-bottom: 1px dotted #fff;
+            color: #fff;
+            border-radius: 5px;
+            margin: 5px;
+            font-weight: bold;
+        }
+        input[type=submit]{
+            width: 100%;
+            box-sizing: border-box;
+            padding: 10px 0;
+            margin-top: 30px;
+            outline: none;
+            border: none;
+            background: darkblue;
+            opacity: 0.7;
+            border-radius: 20px;
+            font-size: 20px;
+            color: #fff;
+        }
+        input[type=submit]:hover{
+            background: #003366;
+            opacity: 0.7;
+        }
+        .dropbtn {
+        background-color: #4CAF50;
+        color: white;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+        }
 
-body.no-block {
-  flex-flow: column;
-  overflow-x: hidden;
-  display: flex;
-}
+        .dropdown {
+        position: relative;
+        display: inline-block;
+        }
 
-.fp-no-block {
-  align-items: center;
-  justify-content: center;
-  font-size: 20px;
-  flex-direction: column;
-  cursor: pointer;
-  color: rgb(68, 68, 68);
-  display: none;
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-  text-align: center;
-  background: #FFF;
-  transition: margin 0.25s linear 0.25s;
-}
+        .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        }
 
-.fp-no-block:hover {
-  background: #EFEFEF;
-}
+        .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        }
 
-.fp-no-block.fp-visible {
-  display: flex;
-}
+        .dropdown-content a:hover {background-color: #f1f1f1}
 
-.fp-no-sections {
-  flex: 2;
-}
+        .dropdown:hover .dropdown-content {
+        display: block;
+        }
 
-.fp-no-block p {
-  margin: 0;
-}
-
-.fp-no-sections p + p {
-  font-size: 16px;
-  margin-top: 5px;
-}
-
-.fdb-block {
-  box-shadow: 0;
-  margin-bottom: 0;
-  transition: margin 0.25s linear 0.25s;
-}
-
-.fp-active {
-  box-shadow: 0px 0px 20px rgba(0,0,0,0.14), 0 0px 6px rgba(0,0,0,0.16);
-  -moz-box-shadow: 0px 0px 20px rgba(0,0,0,0.14), 0 0px 6px rgba(0,0,0,0.16);
-  -webkit-box-shadow: 0px 0px 20px rgba(0,0,0,0.14), 0 0px 6px rgba(0,0,0,0.16);
-  z-index: 9999;
-}
-
-body.fp-add-view [data-block-type],
-body.fp-add-view .fp-no-block {
-  margin-bottom: 20px;
-}
-
-body.fp-add-view [data-block-type] {
-  user-select: none;
-  position: relative;
-}
-
-body.fp-add-view section[data-block-type] {
-  cursor: move;
-}
-
-body.fp-add-view [data-block-type]:after {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  display: block;
-  z-index: 10000;
-  content: "";
-}
-
-.fp-drop-placeholder {
-  height: 200px;
-  width: 100%;
-  border: solid 10px  #0098f7;
-  background: #FFF;
-  margin-bottom: 20px;
-}
-
-.fp-dragging {
-  display: none;
-}
-
-.fr-popup {
-  z-index: 10000 !important;
-}
-
-.mySlides {display:none;}
-
-.contact-form{
-  width: 85%;
-  max-width: 600px;
-  background: #f1f1f1;
-  position: absolute;
-  top: 75%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  padding: 30px 40px;
-  box-sizing: border-box;
-  border-radius: 8px;
-  text-align: center;
-  box-shadow: 0 0 20px #000000b3;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.contact-form h1{
-  margin-top: 0;
-  font-weight: 400;
-  color: darkblue;
-}
-
-.txtb{
-  border: 1px solid gray;
-  margin: 8px 0;
-  padding: 12px 18px;
-  border-radius: 8px;
-}
-.txtb label{
-  display: block;
-  text-align: left;
-  color: #333;
-  font-size: 14px;
-}
-.txtb input, .txtb textarea{
-  width: 100%;
-  border: none;
-  background: none;
-  outline: none;
-  font-size: 18px;
-  margin-top: 6px;
-}
-.contact-form .btn{
-  display: inline-block;
-  background: #9b59b6;
-  padding: 10px 0;
-  color: white;
-  text-transform: uppercase;
-  cursor: pointer;
-  margin-top: 8px;
-  width: 100%;
-
-}
-
-	/* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
-	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-</style>
+        .dropdown:hover .dropbtn {
+        background-color: #3e8e41;
+        }
+    </style>
 
 </head>
 
 <body>
+    <header data-block-type="headers" data-id="1" style="background-color: rgba(0,0,0,0.5);">
+        <div class="container">
+          <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="index.html">
+              <img src="img/logo.png" height="60" alt="logo">
+            </a>
+      
+            <button style="background-color: skyblue;" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav5" aria-controls="navbarNav5" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+      
+            <div class="collapse navbar-collapse" id="navbarNav5">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html" contenteditable="false" style="color: white;">Home </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="Ayush.html" contenteditable="false" style="color: white;">Ayush</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="Bhumi.html" contenteditable="false" style="color: white;">Bhumi</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="Vidya.html" contenteditable="false" style="color: white;">Vidya</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="Rang.html" contenteditable="false" style="color: white;">Rang</a>
+                </li>
+              </ul>
+      
+              <ul class="navbar-nav justify-content-end ml-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="team.html" contenteditable="false" style="color: white;">Meet the Team</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html" contenteditable="false" style="color: white;">Contact us</a>
+                </li>
+                </li>
+              </ul>
+              <a class="btn btn-primary ml-md-3" href="Registration.html" contenteditable="false" style="background-color: darkblue; border-color:darkblue;">Get Involved</a>
+                <a class="btn btn-primary ml-md-3 " href="#" contenteditable="false " style="background-color:rgb(255, 230, 0) ; border-color:rgb(255, 230, 0)">Donate Now</a>
+              </div>
+          </nav>
+        </div>
+      </header>
+    <div class="wrap">
+        <h2>Sign up HERE</h2>
+        <form>
+            <input type="text" placeholder="Full Name" required>
+            <input type="text" placeholder="Email">
+            <input type="tel" placeholder="Contact Number" required>
+            <input type="text" placeholder="State" required>
+            <input type="text" placeholder="District" required>
+            <input type="text" placeholder="Qualification">
+            <input type="text" placeholder="Occupation">
 
-  <header data-block-type="headers" data-id="1" style="background-color: rgb(0,0,0)">
-    <div class="container">
-      <nav class="navbar navbar-expand-lg">
-        <a class="navbar-brand" href="index.html">
-          <img src="img/logo.png" height="60" alt="logo">
-        </a>
-  
-        <button style="background-color: skyblue;" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav5" aria-controls="navbarNav5" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-  
-        <div class="collapse navbar-collapse" id="navbarNav5">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html" contenteditable="false">Home </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="Ayush.html" contenteditable="false">Ayush</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="Bhumi.html" contenteditable="false">Bhumi</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="Vidya.html" contenteditable="false">Vidya</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="Rang.html" contenteditable="false">Rang</a>
-            </li>
-          </ul>
-  
-          <ul class="navbar-nav justify-content-end ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="team.html" contenteditable="false">Meet the Team</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="index.html" contenteditable="false">Contact us</a>
-            </li>
-            </li>
-          </ul>
-          <a class="btn btn-primary ml-md-3" href="Registration.html" contenteditable="false" style="background-color: darkblue; border-color:darkblue;">Get Involved</a>
-            <a class="btn btn-primary ml-md-3 " href="#" contenteditable="false " style="background-color:rgb(255, 230, 0) ; border-color:rgb(255, 230, 0)">Donate Now</a>
-          </div>
-      </nav>
+            <select class="dpdwn" style="color: rgb(117, 117, 117);">
+                <option value="" disabled selected>Area of interest</option>
+                <option>Administration</option>
+                <option>Education</option>
+                <option value="health">Health</option>
+                <option>Environment</option>
+                <option>Media</option>
+            </select>
+
+            <input type="submit" value="REGISTER">
+        </form>
     </div>
-  </header>
-
-<div id="mc_embed_signup">
-  <div class="contact-form">
-    <form action="https://foundation.us8.list-manage.com/subscribe/post?u=ca8d985d56b11fe6a166766f7&amp;id=f6591b3b02" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-        <div id="mc_embed_signup_scroll">
-	        <h1>Get Involved</h1>
-            <div class="indicates-required" style="text-align: left;"><span class="asterisk">*</span> indicates required</div>
-            <div class="mc-field-group txtb">
-	            <label for="mce-EMAIL" style="font-size: larger;">Email Address<span class="asterisk">*</span>
-                </label>
-	            <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" >
-            </div>
-            <div class="mc-field-group txtb">
-	            <label for="mce-NAME"style="font-size: larger;">Full Name<span class="asterisk">*</span>
-                </label>
-	            <input type="text" value="" name="NAME" class="required" id="mce-NAME">
-            </div>
-            <div class="mc-field-group size1of2 txtb">
-	            <label for="mce-PHONE"style="font-size: larger;">Phone Number<span class="asterisk">*</span>
-                </label>
-	            <input type="text" name="PHONE" class="required" value="" id="mce-PHONE">
-            </div>
-            <div class="mc-field-group txtb">
-	            <label for="mce-STATE"style="font-size: larger;">State & District<span class="asterisk">*</span>
-                </label>
-	            <input type="text" value="" name="STATE" class="required" id="mce-STATE">
-            </div>
-            <div class="mc-field-group txtb">
-	            <label for="mce-QUAL" style="font-size: larger;">Qualification </label>
-	            <input type="text" value="" name="QUAL" class="" id="mce-QUAL">
-            </div>
-            <div class="mc-field-group txtb">
-	            <label for="mce-OCC" style="font-size: larger;">Occupation </label>
-	            <input type="text" value="" name="OCC" class="" id="mce-OCC">
-            </div>
-            <div class="mc-field-group txtb">
-	            <label for="mce-FIELD" style="font-size: larger;">Area of Interest </label>
-	            <select name="FIELD" class="" id="mce-FIELD">
-	            <option value=""></option>
-	            <option value="Administration">Administration</option>
-                <option value="Education">Education</option>
-                <option value="Health">Health</option>
-                <option value="Environment">Environment</option>
-	        </select>
-            </div>
-	        <div id="mce-responses" class="clear">
-		        <div class="response" id="mce-error-response" style="display:none"></div>
-		        <div class="response" id="mce-success-response" style="display:none"></div>
-	        </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_ca8d985d56b11fe6a166766f7_f6591b3b02" tabindex="-1" value=""></div>
-            <div class="clear" ><input type="submit" value="Register" name="Subscribe" id="mc-embedded-subscribe" class="button" style="background-color: darkblue; border-color: darkblue;font-family: Arial, Helvetica, sans-serif; font-size: 26px; color: white;"></div>
-         </div>
-    </form>
-  </div>
-</div>
-<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='NAME';ftypes[1]='text';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='STATE';ftypes[5]='text';fnames[6]='QUAL';ftypes[6]='text';fnames[2]='OCC';ftypes[2]='text';fnames[3]='FIELD';ftypes[3]='dropdown';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
-<!--End mc_embed_signup-->
-
 </body>
 
 </html>
