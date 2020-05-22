@@ -177,18 +177,31 @@
           </nav>
         </div>
       </header>
-    <div class="wrap">
+    <div class="wrap" style="position: relative;">
+        <div id="submit-anim" style="
+          z-index:1000;
+          position: absolute;
+          width:100%;
+          height:100%;
+          display: none; /*set to flex when displaying */
+          top:0;
+          left:0;
+          background-color: #ffffff66;
+          border-radius: inherit;
+          ">
+          <img style="margin: auto;" src="img/reg-anim.svg"/>
+        </div>
         <h2>Sign up HERE</h2>
-        <form>
-            <input type="text" placeholder="Full Name" required>
-            <input type="text" placeholder="Email">
-            <input type="tel" placeholder="Contact Number" required>
-            <input type="text" placeholder="State" required>
-            <input type="text" placeholder="District" required>
-            <input type="text" placeholder="Qualification">
-            <input type="text" placeholder="Occupation">
+        <form id="signup-form" action="http://localhost:8000/email/" method="POST">
+            <input name="name" type="text" placeholder="Full Name" required>
+            <input name="email" type="text" placeholder="Email" required>
+            <input name="phone" type="tel" placeholder="Contact Number" required>
+            <input name="state" type="text" placeholder="State" required>
+            <input name="district" type="text" placeholder="District" required>
+            <input name="qualification" type="text" placeholder="Qualification">
+            <input name="occupation" type="text" placeholder="Occupation">
 
-            <select class="dpdwn" style="color: rgb(117, 117, 117);">
+            <select name="interest" class="dpdwn" style="color: rgb(117, 117, 117);">
                 <option value="" disabled selected>Area of interest</option>
                 <option>Administration</option>
                 <option>Education</option>
@@ -200,6 +213,44 @@
             <input type="submit" value="REGISTER">
         </form>
     </div>
+    <script>
+      function showAnim(){
+        let el = document.getElementById("submit-anim");
+        el.style.display = "flex";
+      }
+      function closeAnim(){
+        let el = document.getElementById("submit-anim");
+        el.style.display = "none";
+      }
+      function submit(e){
+        e.preventDefault();
+        //validate
+        let data = new FormData(e.target);
+        let req = new XMLHttpRequest();
+        
+        req.open("POST",e.target.action);
+        req.onload = function(e){
+          closeAnim();
+          if(req.status != 200){
+            //handle error
+            alert(req.response);
+          }
+          else {
+            //success
+            alert("Thank you for registering");
+          }
+        }
+        req.onerror = function(e){
+          //Connection error
+          closeAnim();
+          console.log(e);
+        }
+        showAnim();
+        req.send(data);
+        
+      }
+      document.getElementById("signup-form").addEventListener('submit',submit);
+    </script>
 </body>
 
 </html>
